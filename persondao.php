@@ -22,13 +22,7 @@ if ($len==1){
 }else {
 	$dept="外语系";
 }
-if($s3==11 || $s3==21 || $s3==31){
-	$class="计科班";
-}elseif($s3==12 || $s3==22){
-	$class="会计班";
-}else{
-	$class="外语班";
-};
+$class=$s3;
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';

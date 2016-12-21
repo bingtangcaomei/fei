@@ -60,7 +60,7 @@ function changeselect2(locationid)
  {
   if (subcat2[i][0] == locationid)
   {
-   document.form.s3.options[document.form.s3.length] = new Option(subcat2[i][2], subcat2[i][0]);
+   document.form.s3.options[document.form.s3.length] = new Option(subcat2[i][2], subcat2[i][3]);
   }
  }
 }
