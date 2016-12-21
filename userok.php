@@ -11,5 +11,6 @@ echo "$date"; */
 <a href="setinfo.php">发布帖子</a><br>
 <a href="list.php">查看帖子</a><br>
 <a href="select.php">我的帖子</a><br>
+<a href="pass.php">密码修改</a><br>
 <a href="index.php">退出登录</a>
 

@@ -12,7 +12,7 @@ $id=$_COOKIE["id"];
 $sql="UPDATE news SET content=$content WHERE id='$id'";
 $result=mysql_query ( $sql, $conn );
 if (! $result) {
-	die ( '111111' );
+	die ( '' );
 }
 echo "修改成功！";
 ?>
