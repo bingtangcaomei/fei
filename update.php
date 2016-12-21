@@ -6,16 +6,15 @@ $conn = mysql_connect ( $dbhost, $dbuser, $dbpass );
 if (! $conn) {
 	die ( '连接数据库失败！' );
 }
-$user=$_COOKIE['user'];
-$sql = "SELECT  id,title,content FROM news where name= '$user'";
+$id=$_GET['id'];
+setcookie ( "id", "$id" );
+$sql = "SELECT  title,content FROM news where id= '$id'";
 mysql_select_db ( 'fei' );
 $result = mysql_query ( $sql, $conn );
 if (! $result) {
 	die ( '' );
 }
 while($arr=mysql_fetch_assoc($result)){
-	$id=$arr['id'];
-    setcookie ( "id", "$id" );
 	$title=$arr['title'];
 	$content=$arr['content'];
 }

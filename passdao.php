@@ -18,8 +18,7 @@ if(!$result){
 while ( $row = mysql_fetch_array ( $result, MYSQL_ASSOC ) ) {
 	$pass2 = $row ['pass'];
 }
-if(!$pass2==$pass){
-    if($pass==$pass1){
+    if($pass==$pass1 && $pass2!=$pass){
 	   $sql="UPDATE user SET pass=$pass WHERE uid='$uid'";
 	   $result=mysql_query($sql,$conn);
 	   if(!$result){
@@ -27,8 +26,7 @@ if(!$pass2==$pass){
 	   }
 	echo "修改成功！<br>";
 	echo "<a href='userok.php'>返回</a>";
-}
-}else{
-	echo "不能与原密码重复！<br>";
+}else {
+	echo "不能与原密码相同！<br>";
 	echo "<a href='userok.php'>返回</a>";
 }

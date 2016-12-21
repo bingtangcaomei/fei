@@ -14,7 +14,7 @@ if ($s1==1){
 }else {
 	$year="14级";
 }
-$len=substr( $s2, 1, 2 );
+$len=substr( $s2, 1,2 );
 if ($len==1){
 	$dept="信息工程系";
 }elseif($len==2) {
@@ -22,22 +22,12 @@ if ($len==1){
 }else {
 	$dept="外语系";
 }
-if($s3==111){
-	$class="计科1班";
-}elseif($s3==112){
-	$class="计科2班";
-}elseif($s3==211){
-	$class="计科1班";
-}elseif($s3==121){
-	$class="会计1班";
-}elseif($s3==122){
-	$class="会计2班";
-}elseif($s3==131){
-	$class="外语1班";
-}elseif($s3==221){
-	$class="会计1班";
+if($s3==11 || $s3==21 || $s3==31){
+	$class="计科班";
+}elseif($s3==12 || $s3==22){
+	$class="会计班";
 }else{
-	$class="外语1班";
+	$class="外语班";
 };
 $dbhost = 'localhost';
 $dbuser = 'root';

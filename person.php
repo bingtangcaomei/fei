@@ -82,11 +82,11 @@ function changeselect2(locationid)
 </select><br><br>
 系别:
 <select name="s2" onChange="changeselect2(this.value)">
- <option value="changeselect1(this.value)">--请选择系别--</option>
+ <option value="">--请选择系别--</option>
 </select><br><br>
 专业:
 <select name="s3">
-  <option value="changeselect1(this.value)">--请选择专业--</option>
+  <option value="">--请选择专业--</option>
 </select><br><br>
 <input type="submit" value="保存">
 </form>
