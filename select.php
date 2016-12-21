@@ -20,6 +20,7 @@ if (! $result) {
 					<th>题目</th>
 					<th>内容</th>
 					<th>操作</th>
+					<th>操作</th>
 				</tr>
 <?php
 while($arr=mysql_fetch_assoc($result)){
@@ -29,6 +30,7 @@ while($arr=mysql_fetch_assoc($result)){
                     <td><?php echo $arr['title'];?></td>
                     <td><?php echo $arr['content'];?></td>
                     <td><?php echo "<a href='delete.php?id=".$arr['id']."'><font color='red'>删除</a>"?></td>
+                    <td><?php echo "<a href='update.php?id=".$arr['id']."'><font color='red'>修改</a>"?></td>
                     
                 </tr>
                   <?php 	} ?>  
