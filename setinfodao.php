@@ -26,9 +26,9 @@ if (isset ( $_POST ['fabu'] )){
 	mysql_select_db('fei');
 	$result = mysql_query ( $sql, $conn );
 	if (! $result) {
-		die ( '发布失败！' );
+		die ( '发布失败！');
 	}
-	echo '发布成功！<br>';
-	echo "<a href='message.php'>返回</a>";
+	echo '发布成功！<br>正在返回..';
 }
 ?>
+<meta http-equiv="Refresh" content="1;URL=message.php" />

@@ -7,14 +7,15 @@ $conn = mysql_connect ( $dbhost, $dbuser, $dbpass );
 if (! $conn) {
 	die ( '连接数据库失败！' );
 }
-$name=$_POST['name'];
+$user=$_COOKIE["user"];
 mysql_select_db ( 'fei' );
-$sql="SELECT id,sex,tel, year,dept,class FROM student WHERE name='$name'";
+$sql="SELECT id,name,sex,tel, year,dept,class FROM friend WHERE user='$user'";
 $result=mysql_query($sql,$conn);
 if(!$result){
 	die('');
 }
 ?>
+<h1>我的好友</h1>
 	<table>
 		       <tr>
 					<th>姓名</th>
@@ -28,13 +29,13 @@ if(!$result){
 while($arr=mysql_fetch_assoc($result)){
 ?>
 				<tr>
-				    <td><?php echo "<font color=red>{$name}</font>";?></td>
+				    <td><?php echo $arr['name'];?></td>
                     <td><?php echo $arr['sex'];?></td>
                     <td><?php echo $arr['tel'];?></td>
                     <td><?php echo $arr['year'];?></td>
                     <td><?php echo $arr['dept'];?></td>
                     <td><?php echo $arr['class'];?></td>
-                    <td><?php echo "<a href='frienddao.php?id=".$arr['id']."'><font color='blue'>添加好友</a>"?></td>        
+                    <td><?php echo "<a href='frienddel.php?id=".$arr['id']."'><font color='blue'>删除好友</a>"?></td>        
                 </tr>
                   <?php 	} ?>  
                             </table>
