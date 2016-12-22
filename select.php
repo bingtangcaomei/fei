@@ -1,4 +1,5 @@
 <?php
+echo "用户:" . $_COOKIE["user"] ."<br>";
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
@@ -7,7 +8,16 @@ if (! $conn) {
 	die ( '连接数据库失败！' );
 }
 $user=$_COOKIE['user'];
-$sql = "SELECT  id,title,content FROM news where name= '$user'";
+$sql = "SELECT name FROM student where user= '$user'";
+mysql_select_db ( 'fei' );
+$result = mysql_query ( $sql, $conn );
+if (! $result) {
+	die ( '' );
+}
+while($arr=mysql_fetch_assoc($result)){
+	$name=$arr['name'];
+}
+$sql = "SELECT  id,title,content FROM news where name= '$name'";
 mysql_select_db ( 'fei' );
 $result = mysql_query ( $sql, $conn );
 if (! $result) {
@@ -16,8 +26,7 @@ if (! $result) {
 	?>
 	<table>
 		       <tr>
-					<th>id</th>
-					<th>题目</th>
+					<th>标题</th>
 					<th>内容</th>
 					<th>操作</th>
 					<th>操作</th>
@@ -26,7 +35,6 @@ if (! $result) {
 while($arr=mysql_fetch_assoc($result)){
 ?>
 				<tr>
-                    <td><?php echo $arr['id'];?></td>
                     <td><?php echo $arr['title'];?></td>
                     <td><?php echo $arr['content'];?></td>
                     <td><?php echo "<a href='delete.php?id=".$arr['id']."'><font color='red'>删除</a>"?></td>
@@ -35,7 +43,7 @@ while($arr=mysql_fetch_assoc($result)){
                 </tr>
                   <?php 	} ?>  
                             </table>
-                            <a href="userok.php">返回</a>
+                            <a href="message.php">返回</a>
 
         <?php 
             mysql_close();//关闭数据库

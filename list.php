@@ -1,4 +1,5 @@
 <?php
+echo "用户:" . $_COOKIE["user"] ."<br>";
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
@@ -31,7 +32,7 @@ while($arr=mysql_fetch_assoc($result)){
                 </tr>
                   <?php 	} ?>  
                             </table>
-                            <a href="userok.php">返回</a>
+                            <a href="message.php">返回</a>
 
         <?php 
             mysql_close();//关闭数据库

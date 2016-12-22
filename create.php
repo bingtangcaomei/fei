@@ -23,13 +23,16 @@ echo '数据库创建成功!';  */
      pass VARCHAR(100) NOT NULL,
  	 profession VARCHAR(100) NOT NULL,
  	 PRIMARY KEY(id))"; */
-/*  帖子表
- * $sql = "CREATE TABLE news(
+// 帖子表
+    $sql = "CREATE TABLE news(
  	 id INT NOT NULL AUTO_INCREMENT,
  	 name VARCHAR(100) NOT NULL,
  	 title VARCHAR(100) NOT NULL,
      content VARCHAR(100) NOT NULL,
- 	 PRIMARY KEY(id))"; */
+     year VARCHAR(100) NOT NULL,
+     dept VARCHAR(100) NOT NULL,
+     class VARCHAR(100) NOT NULL,
+ 	 PRIMARY KEY(id))";
 //学校信息-------三级联动
 /*    $sql=" CREATE TABLE info1 (
     id INT NOT NULL AUTO_INCREMENT,
@@ -46,7 +49,7 @@ echo '数据库创建成功!';  */
    	dept_id INT(50) NOT NULL,
     PRIMARY KEY  (id))"; */
    //用户信息
-  $sql = "CREATE TABLE student(
+/*   $sql = "CREATE TABLE student(
  	 id INT NOT NULL AUTO_INCREMENT,
   	 user VARCHAR(100) NOT NULL,
  	 name VARCHAR(100) NOT NULL,
@@ -55,7 +58,17 @@ echo '数据库创建成功!';  */
      year VARCHAR(100) NOT NULL,	
      dept VARCHAR(100) NOT NULL,		
      class VARCHAR(100) NOT NULL,			
- 	 PRIMARY KEY(id))"; 
+ 	 PRIMARY KEY(id))";  */
+/*      $sql = "CREATE TABLE friend(
+     id INT NOT NULL AUTO_INCREMENT,
+     user VARCHAR(100) NOT NULL,
+     name VARCHAR(100) NOT NULL,
+     sex VARCHAR(100) NOT NULL,
+     tel VARCHAR(100) NOT NULL,
+     year VARCHAR(100) NOT NULL,
+     dept VARCHAR(100) NOT NULL,
+     class VARCHAR(100) NOT NULL,
+     PRIMARY KEY(id))";  */
 /*  //数据表删除
  $sql="DROP TABLE "; */
  mysql_select_db('fei');

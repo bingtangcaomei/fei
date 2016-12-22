@@ -13,6 +13,6 @@ if (! $conn) {
 	if (! $result) {
 		die ( '' );
 	}
-	echo "删除成功！";
+	echo "删除成功！<br>正在返回..";
 	?>
-	<br><a href=select.php>返回</a>
+<meta http-equiv="Refresh" content="1;URL=select.php" />

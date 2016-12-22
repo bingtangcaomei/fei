@@ -1,3 +1,4 @@
+<?php echo "用户:" . $_COOKIE["user"] ."<br>";?>
 <html>
 <head>
 <title>郑州成功财经学院校友录</title>

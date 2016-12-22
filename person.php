@@ -1,5 +1,5 @@
 <?php  
-echo "欢迎" . $_COOKIE["user"] . "来到郑州成功财经学院校友录！<br>";
+echo "用户:" . $_COOKIE["user"] ."<br>";
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
@@ -89,6 +89,7 @@ function changeselect2(locationid)
   <option value="">--请选择专业--</option>
 </select><br><br>
 <input type="submit" value="保存">
+<a href='userok.php'>返回</a>
 </form>
 </body>
 </html>
