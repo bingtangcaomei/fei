@@ -1,4 +1,8 @@
-<?php
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css"><?php
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
@@ -28,7 +32,8 @@ if (isset ( $_POST ['fabu'] )){
 	if (! $result) {
 		die ( '发布失败！');
 	}
-	echo '发布成功！<br>正在返回..';
+	echo '<h1>发布成功！</h1><br>正在返回..';
 }
 ?>
-<meta http-equiv="Refresh" content="1;URL=message.php" />
+</div><div class=footer>©冰糖草莓 2016.12</div>
+<meta http-equiv="Refresh" content="2;URL=message.php" />

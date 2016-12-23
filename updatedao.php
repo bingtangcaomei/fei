@@ -1,3 +1,8 @@
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
@@ -14,6 +19,7 @@ $result=mysql_query ( $sql, $conn );
 if (! $result) {
 	die ( '' );
 }
-echo "修改成功！<br>正在返回..";
+echo "<h1>修改成功！</h1><br>正在返回..";
 ?>
-<meta http-equiv="Refresh" content="1;URL=select.php" />
+<meta http-equiv="Refresh" content="2;URL=select.php" />
+</div><div class=footer>©冰糖草莓 2016.12</div>

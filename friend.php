@@ -1,5 +1,11 @@
+<title>我的好友</title>
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
-echo "用户:" . $_COOKIE["user"] ."<br>";
+echo "用户:"."<font color='blue'>". $_COOKIE["user"] . "</font>"."<br>";
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
@@ -35,9 +41,11 @@ while($arr=mysql_fetch_assoc($result)){
                     <td><?php echo $arr['year'];?></td>
                     <td><?php echo $arr['dept'];?></td>
                     <td><?php echo $arr['class'];?></td>
-                    <td><?php echo "<a href='frienddel.php?id=".$arr['id']."'><font color='blue'>删除好友</a>"?></td>        
+                    <td><?php echo "<a href='frienddel.php?id=".$arr['id']."'><font color='red'>删除好友</a>"?></td>        
                 </tr>
                   <?php 	} ?>  
                             </table>
 <?php
-echo  "<a href='userok.php'>返回</a>";
+echo  "<a href='userok.php'>返回</a>";?>
+</div>
+<div class=footer>©冰糖草莓 2016.12</div>

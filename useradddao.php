@@ -1,3 +1,8 @@
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
@@ -47,3 +52,5 @@ if (isset ( $_POST ['zhuce'] )) {
 	}
 	mysql_close ();
 }
+?>
+</div><div class=footer>©冰糖草莓 2016.12</div>

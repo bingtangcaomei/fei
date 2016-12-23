@@ -1,3 +1,8 @@
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
@@ -13,6 +18,7 @@ if (! $conn) {
 	if (! $result) {
 		die ( '' );
 	}
-	echo "删除成功！<br>正在返回..";
+	echo "<h1>删除成功！</h1><br>正在返回..";
 	?>
+</div><div class=footer>©冰糖草莓 2016.12</div>
 <meta http-equiv="Refresh" content="1;URL=friend.php" />

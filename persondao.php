@@ -1,5 +1,9 @@
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php 
-
 $user= $_COOKIE["user"];
 $name=$_POST ['name'];
 $sex=$_POST ['sex'];
@@ -51,3 +55,4 @@ if (! $result) {
 		echo '保存成功！<br>';
 		echo "<a href='userok.php'>返回</a>";}
 ?> 
+</div><div class=footer>©冰糖草莓 2016.12</div>

@@ -1,5 +1,11 @@
+<title>我的信息</title>
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
-echo "用户:" . $_COOKIE["user"] ."<br>";
+echo "用户:"."<font color='blue'>". $_COOKIE["user"] . "</font>"."<br>";
 $user= $_COOKIE["user"];
 $dbhost = 'localhost';
 $dbuser = 'root';
@@ -16,6 +22,7 @@ if (! $result) {
 	die ( '' );
 }
 ?>
+<h1>我的信息</h1>
 	<table>
 		       <tr>
 					<th>姓名</th>
@@ -43,3 +50,4 @@ while($arr=mysql_fetch_assoc($result)){
         <?php 
             mysql_close();//关闭数据库
         ?>
+     </div><div class=footer>©冰糖草莓 2016.12</div>

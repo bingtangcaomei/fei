@@ -1,3 +1,8 @@
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
@@ -38,3 +43,4 @@ setcookie ( "user", "$user" );
  * echo "学生为空！";
  */
 ?>
+</div><div class=footer>©冰糖草莓 2016.12</div>

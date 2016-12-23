@@ -1,5 +1,11 @@
+<title>班级相册</title>
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
-echo "用户:" . $_COOKIE["user"] ."<br><br>";
+echo "用户:"."<font color='blue'>". $_COOKIE["user"] . "</font>"."<br><br>";
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
@@ -25,6 +31,7 @@ if (! $result) {
 	die ( '错误' );
 }
 ?>
+<h1>相册列表</h1>
 	<table>
 		       <tr>
 					<th>简介</th>
@@ -42,6 +49,5 @@ if (! $result) {
                   <?php 	} ?>  
 </table>
 <a href="message.php">返回</a>
-
-
+</div><div class=footer>©冰糖草莓 2016.12</div>
 

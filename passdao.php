@@ -1,3 +1,8 @@
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
@@ -30,3 +35,5 @@ while ( $row = mysql_fetch_array ( $result, MYSQL_ASSOC ) ) {
 	echo "不能与原密码相同！<br>";
 	echo "<a href='userok.php'>返回</a>";
 }
+?>
+</div><div class=footer>©冰糖草莓 2016.12</div>

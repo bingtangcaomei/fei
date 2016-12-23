@@ -1,5 +1,11 @@
+<title>校友查询</title>
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
-echo "用户:" . $_COOKIE["user"] ."<br>";
+echo "用户:"."<font color='blue'>". $_COOKIE["user"] . "</font>"."<br>";
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
@@ -15,6 +21,7 @@ if(!$result){
 	die('');
 }
 ?>
+<h1>查询列表</h1>
 	<table>
 		       <tr>
 					<th>姓名</th>
@@ -39,4 +46,6 @@ while($arr=mysql_fetch_assoc($result)){
                   <?php 	} ?>  
                             </table>
 <?php
-echo  "<a href='userok.php'>返回</a>";
+echo  "<a href='userok.php'>返回</a>";?>
+</div>
+<div class=footer>©冰糖草莓 2016.12</div>

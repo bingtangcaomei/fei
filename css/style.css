@@ -1,0 +1,40 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.all {
+	margin: 0px auto;
+	width: 960px;
+	text-align: center;
+}
+h1 {
+	font-size: 30px;
+	color:blue;
+	font-weight: 700;
+	text-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+}
+
+form {
+	position: relative;
+	width: 305px;
+	margin: 15px auto 0 auto;
+	text-align: center;
+}
+
+input {
+	width: 270px;
+	height: 42px;
+	margin-top: 25px;
+	padding: 0 15px;
+	background: #2d2d2d; /* browsers that don't support rgba */
+	background: rgba(45, 45, 45, .15);
+	border: 1px solid #3d3d3d; /* browsers that don't support rgba */
+	border: 1px solid rgba(255, 255, 255, .15);
+}
+.footer{
+	width: 100%;
+	clear: both;
+	color: red;
+	padding-top: 2cm;	
+	text-align: center;
+}

@@ -1,5 +1,13 @@
+<html>
+<title>个人信息</title>
+<body>
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php  
-echo "用户:" . $_COOKIE["user"] ."<br>";
+echo "用户:"."<font color='blue'>". $_COOKIE["user"] . "</font>"."<br>";
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
@@ -10,11 +18,6 @@ if (! $conn) {
 mysql_select_db("fei",$conn)
  or die('');
 ?>
-<html>
- <head>
-  <title>校友录</title>
- </head>
-<body>
 <script language="JavaScript">
  
 //二级菜单数组
@@ -66,7 +69,7 @@ function changeselect2(locationid)
 }
 
 </script><br>
-
+<h1>个人信息</h1>
 <form name="form" action="persondao.php" method="post">
 姓名:<input type="text" name="name" id="name"><br><br>
 性别:<input type="radio" name="sex" value=男>男
@@ -91,5 +94,7 @@ function changeselect2(locationid)
 <input type="submit" value="保存">
 <a href='userok.php'>返回</a>
 </form>
+</div>
+<div class=footer>©冰糖草莓 2016.12</div>
 </body>
 </html>

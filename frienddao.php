@@ -1,5 +1,10 @@
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
-echo "用户:" . $_COOKIE["user"] ."<br>";
+echo "用户:"."<font color='blue'>". $_COOKIE["user"] . "</font>"."<br>";
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
@@ -28,6 +33,7 @@ $result = mysql_query ( $sql, $conn );
 if (! $result) {
 	die ( '' );
 }
-	echo "添加成功！<br>正在返回..";
+	echo "<h1>添加成功！</h1><br>正在返回..";
 	?>
-<meta http-equiv="Refresh" content="1;URL=userok.php" />
+</div><div class=footer>©冰糖草莓 2016.12</div>
+<meta http-equiv="Refresh" content="3;URL=userok.php" />

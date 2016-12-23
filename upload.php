@@ -1,5 +1,10 @@
+<div class="all">
+      <div class="logo">
+      <img src="css/logo.png">
+      </div>
+<link rel="stylesheet" href="css/style1.css">
 <?php
-echo "用户:" . $_COOKIE["user"] ."<br><br>";
+echo "用户:"."<font color='blue'>". $_COOKIE["user"] . "</font>"."<br><br><br>";
 $arrType=array('image/jpg','image/jpeg','image/gif','image/png','image/bmp','image/pjpeg');
 $upfile='./image'; //图片目录路径
 $max_size='500000';      // 最大文件限制（单位：byte）
@@ -31,13 +36,15 @@ $file=$_FILES['upfile'];
    $picName=$upfile."/cloudy".$fname;
    
    if(file_exists($picName)){
-    echo "<font color='red'>同文件名已存在！</font>";
+    echo "<font color='red'>同文件名已存在！</font><br>";
     echo "<a href='image.php'>返回</a>";
+    echo "</div><div class=footer>©冰糖草莓 2016.12</div>";
     exit;
      }
    if(!move_uploaded_file($file['tmp_name'],$picName)){  
-    echo "<font color='red'>移动文件出错！</font>";
+    echo "<font color='red'>移动文件出错！</font><br>";
     echo "<a href='image.php'>返回</a>";
+    echo "</div><div class=footer>©冰糖草莓 2016.12</div>";
     exit;
     }
    else{
@@ -67,10 +74,12 @@ $file=$_FILES['upfile'];
    	if (! $result) {
    		die ( '' );
    	}
-echo "<font color='red'>上传成功！</font><br>";
-echo "图片预览：<br><div style='border:#F00 1px solid; width:200px;height:200px'>
-    <img src=\"".$picName."\" width=200px height=200px>".$fname."</div><br>";}}
+echo "<font color='red'>上传成功！</font><br><br>";
+echo "图片预览：<br><center><div style='border:#F00 1px solid; width:200px;height:200px'>
+    <img src=\"".$picName."\" width=200px height=200px>".$fname."</div></center><br>";}}
 echo "<a href='image.php'>返回</a>";
+?>
+</div><div class=footer>©冰糖草莓 2016.12</div>
 
 
 
