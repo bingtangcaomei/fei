@@ -59,7 +59,8 @@ echo '数据库创建成功!';  */
      dept VARCHAR(100) NOT NULL,		
      class VARCHAR(100) NOT NULL,			
  	 PRIMARY KEY(id))";  */
-     $sql = "CREATE TABLE friend(
+    //我的好友表
+/*      $sql = "CREATE TABLE friend(
      id INT NOT NULL AUTO_INCREMENT,
      user VARCHAR(100) NOT NULL,
      name VARCHAR(100) NOT NULL,
@@ -68,7 +69,15 @@ echo '数据库创建成功!';  */
      year VARCHAR(100) NOT NULL,
      dept VARCHAR(100) NOT NULL,
      class VARCHAR(100) NOT NULL,
-     PRIMARY KEY(id))"; 
+     PRIMARY KEY(id))";  */
+    //班级相册
+    $sql = "CREATE TABLE image(
+     id INT NOT NULL AUTO_INCREMENT,
+     image VARCHAR(100) NOT NULL,
+     year VARCHAR(100) NOT NULL,
+     dept VARCHAR(100) NOT NULL,
+     class VARCHAR(100) NOT NULL,
+     PRIMARY KEY(id))";  
  //数据表删除
  /* $sql="DROP TABLE "; */
  mysql_select_db('fei');

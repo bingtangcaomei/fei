@@ -9,6 +9,7 @@
 密&nbsp;码:<input type="password" name="pass" id="pass"><br>
 重复密码:<input type="password" name="pass1" id="pass1"><br>
 <input type="submit" value='注册' id="zhuce" name="zhuce" >
+<a href="index.php">返回</a>
 </form>
 </body>
 </html>
