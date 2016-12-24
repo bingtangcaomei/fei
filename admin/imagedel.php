@@ -1,8 +1,8 @@
 <div class="all">
       <div class="logo">
-      <img src="css/logo.png">
+      <img src="../css/logo.png">
       </div>
-<link rel="stylesheet" href="css/style1.css">
+<link rel="stylesheet" href="../css/style1.css">
 <?php
 $dbhost = 'localhost';
 $dbuser = 'root';
@@ -13,7 +13,7 @@ if (! $conn) {
 }
     $id=$_GET['id'];
 	mysql_select_db ( 'fei' );
-	$sql = "DELETE  FROM friend WHERE id='$id'";
+	$sql = "DELETE  FROM image WHERE id='$id'";
 	$result = mysql_query ( $sql, $conn );
 	if (! $result) {
 		die ( '' );
@@ -21,4 +21,4 @@ if (! $conn) {
 	echo "<h1>删除成功！</h1><br>正在返回..";
 	?>
 </div><div class=footer>©冰糖草莓 2016.12</div>
-<meta http-equiv="Refresh" content="2;URL=friend.php" />
+<meta http-equiv="Refresh" content="2;URL=image.php" />

@@ -1,11 +1,14 @@
 <title>班级相册</title>
 <div class="all">
       <div class="logo">
-      <img src="css/logo.png">
+      <img src="../css/logo.png">
       </div>
-<link rel="stylesheet" href="css/style1.css">
+<link rel="stylesheet" href="../css/style1.css">
 <?php
-echo "用户:"."<font color='blue'>". $_COOKIE["user"] . "</font>"."<br><br>";
+$year=$_COOKIE["year"];
+$dept=$_COOKIE["dept"];
+$class=$_COOKIE["class"];
+echo "你所在的班级是:&nbsp;<font color='red'>{$year}&nbsp;{$dept}&nbsp;{$class}</font><br><br>";
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
@@ -25,7 +28,7 @@ while($arr=mysql_fetch_assoc($result)){
 	$dept=$arr['dept'];
 	$class=$arr['class'];
 }
-$sql = "SELECT image,year,dept,class FROM image where year= '$year' AND dept='$dept' AND class='$class'";
+$sql = "SELECT id,image,year,dept,class FROM image where year= '$year' AND dept='$dept' AND class='$class'";
 $result = mysql_query ( $sql, $conn );
 if (! $result) {
 	die ( '' );
@@ -39,15 +42,15 @@ if (! $result) {
 				</tr>
 <?php while($arr=mysql_fetch_assoc($result)){
 	?>
-	<?php  $picName='./image'."/cloudy".$arr['image'];?>
+	<?php  $picName='../image'."/cloudy".$arr['image'];?>
 				<tr>
                     <td><?php echo $arr['image'];?></td>
                     <td><?php echo "<div style='border:#F00 1px solid; width:200px;height:200px'>
     <img src=\"".$picName."\" width=200px height=200px>"?></td>
-    
+      <td><?php echo "<a href='imagedel.php?id=".$arr['id']."'><font color='red'>删除照片</a>"?></td>        
                 </tr>
                   <?php 	} ?>  
 </table>
-<a href="message.php">返回</a>
+<a href="adminok.php">返回</a>
 </div><div class=footer>©冰糖草莓 2016.12</div>
 

@@ -14,6 +14,7 @@ echo "欢迎" ."<font color='blue'>". $_COOKIE["user"] . "</font>"."来到郑州
 <input type="text"  id=name name=name>
 <input type="submit" value="查询">
 </form><br>
+<?php echo "<font color='red'>请先录入个人信息,否则会使用异常！</font><br><br>";?>
 <a href="person.php">个人信息</a><br>
 <a href="myinfo.php">我的信息</a><br>
 <a href="friend.php">我的好友</a><br>
