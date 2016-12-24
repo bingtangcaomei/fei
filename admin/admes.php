@@ -31,6 +31,7 @@ setcookie("class","$class");
 ?> 
 <h1>班级管理</h1><br>
 <a href="mate.php">校友管理</a><br>
+<a href="list.php">留言管理</a><br>
 <a href="image.php">相册管理</a><br>
 <a href="adminok.php">返回</a>
 </div><div class=footer>©冰糖草莓 2016.12</div>

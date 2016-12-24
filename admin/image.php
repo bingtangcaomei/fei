@@ -16,8 +16,7 @@ $conn = mysql_connect ( $dbhost, $dbuser, $dbpass );
 if (! $conn) {
 	die ( '连接数据库失败！' );
 }
-$user=$_COOKIE['user'];
-$sql = "SELECT year,dept,class FROM student where user= '$user'";
+$sql = "SELECT year,dept,class FROM student where year= '$year' AND dept='$dept' AND class='$class'";
 mysql_select_db ( 'fei' );
 $result = mysql_query ( $sql, $conn );
 if (! $result) {

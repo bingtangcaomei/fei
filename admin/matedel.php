@@ -13,6 +13,19 @@ if (! $conn) {
 }
     $id=$_GET['id'];
 	mysql_select_db ( 'fei' );
+	$sql = "SELECT name FROM student WHERE id='$id'";
+	$result = mysql_query ( $sql, $conn );
+	if (! $result) {
+		die ( '' );
+	}
+	while($arr=mysql_fetch_assoc($result)){
+		$name=$arr['name'];
+	}
+	$sql = "DELETE  FROM news WHERE name='$name'";
+	$result = mysql_query ( $sql, $conn );
+	if (! $result) {
+		die ( '' );
+	}
 	$sql = "DELETE  FROM student WHERE id='$id'";
 	$result = mysql_query ( $sql, $conn );
 	if (! $result) {
