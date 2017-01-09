@@ -13,17 +13,18 @@ $file=$_FILES['upfile'];
  if($_SERVER['REQUEST_METHOD']=='POST'){ //判断提交方式是否为POST
      if(!is_uploaded_file($file['tmp_name'])){ //判断上传文件是否存在
     echo "<font color='red'>文件不存在！</font>";
+    echo "<br><a href='image.php'>返回</a>";
     exit;
     }
    
   if($file['size']>$max_size){  //判断文件大小是否大于500000字节
     echo "<font color='red'>上传文件太大！</font>";
-    echo "<a href='image.php'>返回</a>";
+    echo "<br><a href='image.php'>返回</a>";
     exit;
    } 
   if(!in_array($file['type'],$arrType)){  //判断图片文件的格式
      echo "<font color='red'>上传文件格式不对！</font>";
-     echo "<a href='image.php'>返回</a>";
+     echo "<br><a href='image.php'>返回</a>";
      exit;
    }
   if(!file_exists($upfile)){  // 判断存放文件目录是否存在
@@ -52,7 +53,7 @@ $file=$_FILES['upfile'];
    	$dbhost = 'localhost';
    	$dbuser = 'root';
    	$dbpass = 'root';
-   	$conn = mysql_connect ( $dbhost, $dbuser, $dbpass );
+   	@$conn = mysql_connect ( $dbhost, $dbuser, $dbpass );
    	if (! $conn) {
    		die ( '连接数据库失败！' );
    	}

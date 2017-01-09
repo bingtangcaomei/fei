@@ -3,7 +3,7 @@ $dbhost = 'localhost';
 $dbuser='root';
 $dbpass='root';
 //链接数据库
-$conn=mysql_connect($dbhost,$dbuser,$dbpass);
+@$conn=mysql_connect($dbhost,$dbuser,$dbpass);
 if(!$conn){
 	die('链接失败!<br/>');
 }

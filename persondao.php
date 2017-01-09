@@ -30,7 +30,7 @@ $class=$s3;
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
-$conn = mysql_connect ( $dbhost, $dbuser, $dbpass );
+@$conn = mysql_connect ( $dbhost, $dbuser, $dbpass );
 if (! $conn) {
 	die ( '连接数据库失败！' );
 }

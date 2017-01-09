@@ -9,7 +9,7 @@ echo "用户:"."<font color='blue'>". $_COOKIE["user"] . "</font>"."<br><br>";
 $dbhost = 'localhost';
 $dbuser = 'root';
 $dbpass = 'root';
-$conn = mysql_connect ( $dbhost, $dbuser, $dbpass );
+@$conn = mysql_connect ( $dbhost, $dbuser, $dbpass );
 if (! $conn) {
 	die ( '连接数据库失败！' );
 }
